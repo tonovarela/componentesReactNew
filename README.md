@@ -17,6 +17,11 @@ npm start
 # OR using Yarn
 yarn start
 ```
+Para debuguear en IOS
+```
+npm run ios  --simulato='iPhone 13 Pro'
+```
+
 
 ## Step 2: Start your Application
 
