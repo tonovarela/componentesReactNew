@@ -87,7 +87,7 @@ export const HomeScreen = () => {
           {
             uiItems.map((item,index) => {
               return (                
-                  <MenuItem key={item.component}  {...item} isFirst={index==0} isLast={index==menuItems.length-1 }/>                     
+                  <MenuItem key={item.component}  {...item} isFirst={index==0} isLast={index==uiItems.length-1 }/>                     
               )
             })
           }
@@ -95,7 +95,7 @@ export const HomeScreen = () => {
           {
             animationItems.map((item,index) => {
               return (                
-                  <MenuItem key={item.component}  {...item} isFirst={index==0} isLast={index==menuItems.length-1 }/>                     
+                  <MenuItem key={item.component}  {...item} isFirst={index==0} isLast={index==animationItems.length-1 }/>                     
               )
             })
           }

@@ -15,6 +15,7 @@ export const Title = ({text,safe=false,white=false}:Props) => {
         <View >
             <Text style={{...globalStyles.title,
                             marginTop:safe?top:0,
+                            alignSelf:'center',
                             marginBottom:10,
                             color:white?'white':colors.text
                             }}>{text}</Text>

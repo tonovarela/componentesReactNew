@@ -34,7 +34,7 @@ export const globalStyles = StyleSheet.create({
     backgroundColor: colors.background,
   },
   globalMargin: {
-    paddingHorizontal: 20,
+    paddingHorizontal: 5,
     flex: 1,
   },
 

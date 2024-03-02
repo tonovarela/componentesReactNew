@@ -1,16 +1,21 @@
 import React, { ReactNode } from 'react';
-import { StyleProp,  View, ViewStyle } from 'react-native'
+import { StyleProp,  Text,  View, ViewStyle } from 'react-native'
 import { globalStyles } from '../../../config/theme/theme';
+import { Title } from './Title';
 
 interface Props {
+    title?:string;
     style?: StyleProp<ViewStyle>;
     children?: ReactNode;
 
 }
-export const CustomView = ({ style, children }: Props) => {
+export const CustomView = ({ style, children ,title}: Props) => {
     return (
-        <View style={[globalStyles.mainContainer, style]}>
+        <>        
+        { title && <Title  safe text={title}></Title>}   
+        <View style={[globalStyles.mainContainer, style]}>            
             {children}
         </View>
+        </>
     )
 }
