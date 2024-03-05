@@ -76,14 +76,17 @@ export const HomeScreen = () => {
       <View style={globalStyles.globalMargin}>
         <ScrollView>
           <Title  safe text='Opciones de Menu'></Title>          
+          
+         
+          <View style={{height:30}}/>
           {
-            menuItems.map((item,index) => {
+            animationItems.map((item,index) => {
               return (                
-                  <MenuItem key={item.component}  {...item} isFirst={index==0} isLast={index==menuItems.length-1 }/>                     
+                  <MenuItem key={item.component}  {...item} isFirst={index==0} isLast={index==animationItems.length-1 }/>                     
               )
             })
           }
-          <View style={{height:30}}/>
+           <View style={{height:30}}/>
           {
             uiItems.map((item,index) => {
               return (                
@@ -93,9 +96,9 @@ export const HomeScreen = () => {
           }
           <View style={{height:30}}/>
           {
-            animationItems.map((item,index) => {
+            menuItems.map((item,index) => {
               return (                
-                  <MenuItem key={item.component}  {...item} isFirst={index==0} isLast={index==animationItems.length-1 }/>                     
+                  <MenuItem key={item.component}  {...item} isFirst={index==0} isLast={index==menuItems.length-1 }/>                     
               )
             })
           }

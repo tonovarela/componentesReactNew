@@ -2,6 +2,8 @@ export * from './Button';
 export * from './Card';
 export * from './CustomSwitch';
 export * from './CustomView';
+export * from './FadeInImage';
 export * from './MenuItem';
 export * from './Separator';
+export * from './SubTitle';
 export * from './Title';
