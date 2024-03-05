@@ -1528,6 +1528,11 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@powerdesigninc/react-native-prompt@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.npmjs.org/@powerdesigninc/react-native-prompt/-/react-native-prompt-0.1.2.tgz"
+  integrity sha512-AmdG7/PAsZNGqh3ZZukVN/o84XVTYPvGmz0kUPT2ftlYsKiX6iResu9tgHt7Swvfs9QY3ADlNc4+BqztpwJIyw==
+
 "@react-native-community/cli-clean@12.3.6":
   version "12.3.6"
   resolved "https://registry.npmjs.org/@react-native-community/cli-clean/-/cli-clean-12.3.6.tgz"
@@ -5670,6 +5675,11 @@ react-native-gesture-handler@^2.15.0, "react-native-gesture-handler@>= 1.0.0":
     invariant "^2.2.4"
     lodash "^4.17.21"
     prop-types "^15.7.2"
+
+react-native-prompt-android@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/react-native-prompt-android/-/react-native-prompt-android-1.1.0.tgz"
+  integrity sha512-4JoyEaT2ZnK9IH+tDFpbTiQBgva8UIFGQf4/Uw/tnEVWBERlVlzcs5B82T9BkeEhEqXhp89JaiSBnLWj30lciw==
 
 react-native-safe-area-context@^4.9.0, "react-native-safe-area-context@>= 3.0.0":
   version "4.9.0"
