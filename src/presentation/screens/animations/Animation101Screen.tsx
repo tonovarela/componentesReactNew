@@ -1,30 +1,34 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Animated, Pressable, StyleSheet, Text, View } from 'react-native'
-import { colors } from '../../../config/theme/theme';
+
 import { useAnimation } from '../../hooks/useAnimation';
+import { ThemeContext } from '../../context/ThemeContext';
+import { Button,  Title } from '../../components/ui';
 
 
 export const Animation101Screen = () => {
-    const { fadeIn, fadeOut, animatedOpacity,position,startMoving} = useAnimation();
+    const { colors } = useContext(ThemeContext);
+    const { fadeIn, fadeOut, animatedOpacity, position, startMoving } = useAnimation();
     const handleFadeIn = () => {
-        fadeIn({toValue:1,duration:300},() => { startMoving({initPosition:-200,toValue:0},1000,true)})
+        fadeIn({ toValue: 1, duration: 300 }, () => { startMoving({ initPosition: -500, toValue: 0 }, 1000, true) })
     }
     const handleFadeOut = () => {
-        startMoving({initPosition:0,toValue:-200},1000,true,()=>{ fadeOut({toValue:0,duration:300})})
+        startMoving({ initPosition: 0, toValue: -500 }, 1000, true, () => { fadeOut({ toValue: 0, duration: 300 }) })
     }
-    
+    console.log(colors)
     return (
-        <View style={styles.container}>
-            <Animated.View style={[styles.purpleBox, { opacity: animatedOpacity,transform:[{translateY:position}] }]}>
-            </Animated.View>
-            <Pressable onPress={handleFadeIn} style={{ marginTop: 10 }} >
-                <Text>FadeIn</Text>
-            </Pressable>
-
-            <Pressable onPress={handleFadeOut} style={{ marginTop: 10 }} >
-                <Text>FadeOut</Text>
-            </Pressable>
-        </View>
+        <>        
+        <View style={[styles.container,{backgroundColor:colors.background}]} >
+            <Title text={'Animation1'}></Title>
+            <View style={{flex:1}}></View>
+                <Animated.View style={[{ ...styles.purpleBox,backgroundColor:colors.primary }, { opacity: animatedOpacity, transform: [{ translateY: position }] }]}>
+                </Animated.View>
+                <View>
+                    <Button text='FadeIn' onPress={handleFadeIn} styles={{ marginTop: 10 }} ></Button>
+                    <Button text='FadeIn' onPress={handleFadeOut} styles={{ marginTop: 10 }} ></Button>
+                </View>
+            </View>
+        </>
     )
 }
 
@@ -35,7 +39,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     purpleBox: {
-        backgroundColor: colors.primary,
+        //backgroundColor: 'red',
         width: 150,
         height: 150,
         borderRadius: 50,

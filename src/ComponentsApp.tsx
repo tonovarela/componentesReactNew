@@ -1,13 +1,22 @@
-import React from 'react'
+import React, { PropsWithChildren } from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 import { StackNavigator } from './presentation/navigator/StackNavigator';
+import { ThemeProvider } from './presentation/context/ThemeContext';
 
- const ComponentsApp = () => {
+const AppState = ({ children }: PropsWithChildren) => {
   return (
     <NavigationContainer>
-      <StackNavigator/>
+      <ThemeProvider>
+        {children}
+      </ThemeProvider>
     </NavigationContainer>
-
+  )
+}
+const ComponentsApp = () => {
+  return (
+    <AppState>
+      <StackNavigator />
+    </AppState>
   )
 }
 

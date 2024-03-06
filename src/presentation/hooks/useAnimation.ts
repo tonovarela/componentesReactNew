@@ -4,7 +4,7 @@ import { Animated, Easing } from "react-native"
 export const useAnimation = () => {
     
     const animatedOpacity = useRef(new Animated.Value(1)).current;
-    const position = useRef((new Animated.Value(-200))).current;
+    const position = useRef((new Animated.Value(-500))).current;
     const fadeIn = ({toValue=1,duration=300},callback?: Function) => {
         Animated.timing(animatedOpacity, {
             toValue,

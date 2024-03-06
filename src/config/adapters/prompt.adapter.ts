@@ -34,7 +34,7 @@ export const promtAdapter = ({ title, message, placeholder = '', type = 'default
             { text: textConfirm, onPress: onConfirm },
         ],
         {
-            type,
+            type,        
             cancelable,
             placeholder,
             defaultValue,

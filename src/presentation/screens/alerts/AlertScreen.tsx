@@ -1,5 +1,5 @@
-import React from 'react';
-import { Alert, Text, TouchableOpacity, View } from 'react-native'
+import React, { useContext } from 'react';
+import { Alert } from 'react-native'
 import { CustomView } from '../../components/ui/CustomView';
 import { Title } from '../../components/ui/Title';
 import { globalStyles } from '../../../config/theme/theme';
@@ -7,8 +7,10 @@ import { Button } from '../../components/ui/Button';
 import { Separator } from '../../components/ui/Separator';
 
 import { promtAdapter, promtAsIOS } from '../../../config/adapters/prompt.adapter';
+import { ThemeContext } from '../../context/ThemeContext';
 
 export const AlertScreen = () => {
+    const {isDark} = useContext(ThemeContext);
     const createTwoButtonAlert = () =>
         Alert.alert('Alert Title', 'My Alert Msg', [
             {
@@ -17,7 +19,8 @@ export const AlertScreen = () => {
                 style: 'destructive',
             },
             { text: 'OK', onPress: () => console.log('OK Pressed') },
-        ]);
+            
+        ],{userInterfaceStyle: isDark? 'dark' : 'light'});
 
     const createThreeButtonAlert = () =>
         Alert.alert('Alert Title', 'My Alert Msg', [
@@ -32,7 +35,7 @@ export const AlertScreen = () => {
             },
             { text: 'OK', onPress: () => console.log('OK Pressed') },
 
-        ], { cancelable: true, onDismiss: () => { console.log("onDismiss") } });
+        ], { userInterfaceStyle: isDark? 'dark' : 'light',cancelable: true, onDismiss: () => { console.log("onDismiss") } });
 
 
     const onShowPrompt = () => {
@@ -66,8 +69,8 @@ export const AlertScreen = () => {
             },
             textCancel: 'Cancel',
             textConfirm: 'OK',
-            type: 'default'
-
+            type: 'default',
+    
         });
 
     }
