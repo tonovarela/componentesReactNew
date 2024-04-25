@@ -79,9 +79,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.componentes"
+    namespace "com.tonovarela.componentes"
     defaultConfig {
-        applicationId "com.componentes"
+        applicationId "com.tonovarela.componentes"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

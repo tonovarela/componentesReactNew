@@ -1,4 +1,4 @@
-package com.componentes
+package com.tonovarela.componentes
 
 import android.app.Application
 import com.facebook.react.PackageList
